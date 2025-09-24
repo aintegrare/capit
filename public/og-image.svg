@@ -1,0 +1,60 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="2" fill="#3b82f6" opacity="0.6"/>
+  <circle cx="1100" cy="530" r="3" fill="#8b5cf6" opacity="0.4"/>
+  <circle cx="200" cy="500" r="1.5" fill="#06b6d4" opacity="0.5"/>
+  <circle cx="1000" cy="150" r="2.5" fill="#10b981" opacity="0.3"/>
+  
+  <!-- Main content container -->
+  <rect x="80" y="120" width="1040" height="390" rx="20" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  
+  <!-- Logo/Brand area -->
+  <rect x="120" y="160" width="60" height="60" rx="12" fill="url(#accentGradient)"/>
+  <text x="150" y="200" text-anchor="middle" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="bold">C</text>
+  
+  <!-- Main title -->
+  <text x="220" y="200" fill="white" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="bold">Capit Design System</text>
+  
+  <!-- Subtitle -->
+  <text x="120" y="260" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="400">Sistema de Design Moderno e Componentes Reutilizáveis</text>
+  
+  <!-- Feature highlights -->
+  <g transform="translate(120, 320)">
+    <!-- React -->
+    <rect x="0" y="0" width="120" height="40" rx="20" fill="rgba(97, 218, 251, 0.1)" stroke="#61dafb" stroke-width="1"/>
+    <text x="60" y="25" text-anchor="middle" fill="#61dafb" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">React</text>
+    
+    <!-- TypeScript -->
+    <rect x="140" y="0" width="120" height="40" rx="20" fill="rgba(49, 120, 198, 0.1)" stroke="#3178c6" stroke-width="1"/>
+    <text x="200" y="25" text-anchor="middle" fill="#3178c6" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">TypeScript</text>
+    
+    <!-- Tailwind -->
+    <rect x="280" y="0" width="120" height="40" rx="20" fill="rgba(6, 182, 212, 0.1)" stroke="#06b6d4" stroke-width="1"/>
+    <text x="340" y="25" text-anchor="middle" fill="#06b6d4" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">Tailwind</text>
+    
+    <!-- Next.js -->
+    <rect x="420" y="0" width="120" height="40" rx="20" fill="rgba(255, 255, 255, 0.1)" stroke="#ffffff" stroke-width="1"/>
+    <text x="480" y="25" text-anchor="middle" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500">Next.js</text>
+  </g>
+  
+  <!-- Bottom accent line -->
+  <rect x="120" y="480" width="960" height="2" fill="url(#accentGradient)"/>
+  
+  <!-- URL -->
+  <text x="600" y="560" text-anchor="middle" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="400">capit-design-system.netlify.app</text>
+</svg>
