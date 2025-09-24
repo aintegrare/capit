@@ -2,6 +2,14 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', "*.{js,ts,jsx,tsx,mdx}"],
   theme: {
+    screens: {
+      'xs': '475px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         brand: {
@@ -31,11 +39,16 @@ export default {
       boxShadow: {
         'brand': '0 4px 14px 0 rgba(255, 140, 66, 0.15)',
         'brand-lg': '0 10px 25px 0 rgba(255, 140, 66, 0.2)',
+        'glow-orange': '0 0 20px rgba(255, 140, 66, 0.3)',
+        'glow-orange-lg': '0 0 30px rgba(255, 140, 66, 0.4)',
+        'premium': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.3s ease-out',
         'scale-in': 'scaleIn 0.2s ease-out',
+        'float': 'float 6s ease-in-out infinite',
+        'scale-102': 'scale102 0.2s ease-out',
       },
       keyframes: {
         fadeIn: {
@@ -49,6 +62,14 @@ export default {
         scaleIn: {
           '0%': { transform: 'scale(0.95)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        scale102: {
+          '0%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1.02)' },
         },
       },
     },
