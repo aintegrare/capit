@@ -13,16 +13,18 @@ export default {
     extend: {
       colors: {
         brand: {
-          primary: '#FF8C42',
-          secondary: '#1E3A5F',
-          accent: '#00D4C4',
-          tertiary: '#49679f',
+          primary: '#1E3A5F',
+          secondary: '#2A4A6B',
+          accent: '#49679f',
+          tertiary: '#CC5500',
+          'light-blue': '#87CEEB',
+          'light-orange': '#FFB366',
         },
         semantic: {
           success: '#10B981',
           warning: '#F59E0B',
           error: '#EF4444',
-          info: '#3B82F6',
+          info: '#1E3A5F',
         },
         text: {
           primary: '#111827',
@@ -33,14 +35,17 @@ export default {
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Outfit', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        primary: ['Outfit', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['JetBrains Mono', 'Consolas', 'Monaco', 'monospace'],
       },
       boxShadow: {
-        'brand': '0 4px 14px 0 rgba(255, 140, 66, 0.15)',
-        'brand-lg': '0 10px 25px 0 rgba(255, 140, 66, 0.2)',
-        'glow-orange': '0 0 20px rgba(255, 140, 66, 0.3)',
-        'glow-orange-lg': '0 0 30px rgba(255, 140, 66, 0.4)',
+        'brand': '0 4px 14px 0 rgba(30, 58, 95, 0.15)',
+        'brand-lg': '0 10px 25px 0 rgba(30, 58, 95, 0.2)',
+        'glow-blue': '0 0 20px rgba(30, 58, 95, 0.3)',
+        'glow-blue-lg': '0 0 30px rgba(30, 58, 95, 0.4)',
+        'glow-orange': '0 0 20px rgba(204, 85, 0, 0.3)',
+        'glow-orange-lg': '0 0 30px rgba(204, 85, 0, 0.4)',
         'premium': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
       },
       animation: {

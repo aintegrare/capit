@@ -32,7 +32,7 @@ function App() {
     return (
       <div className="group cursor-pointer">
         <div
-          className="w-full h-16 md:h-20 rounded-xl shadow-md group-hover:shadow-lg transition-all duration-300 border border-neutral-200 mb-2 md:mb-3"
+          className="w-full h-16 md:h-20 rounded-lg shadow-md group-hover:shadow-lg transition-all duration-300 border border-neutral-200 mb-2 md:mb-3"
           style={{ backgroundColor: color }}
         ></div>
         <div className="text-center">
@@ -45,7 +45,7 @@ function App() {
 
   const TypographyExample = ({ text, size, weight }: { text: string; size: string; weight: string }) => {
     return (
-      <div className="p-3 md:p-4 bg-white rounded-xl border border-neutral-200 hover:shadow-md transition-all duration-300">
+      <div className="p-3 md:p-4 bg-white rounded-lg border border-neutral-200 hover:shadow-md transition-all duration-300">
         <p className={`${size} ${weight} text-neutral-900 mb-2`}>{text}</p>
         <p className="text-xs text-neutral-500 font-mono">{size} {weight}</p>
       </div>
@@ -54,7 +54,7 @@ function App() {
 
   const ComponentExample = ({ title, children }: { title: string; children: React.ReactNode }) => {
     return (
-      <div className="bg-white rounded-2xl p-4 md:p-6 shadow-lg border border-neutral-100 hover:shadow-premium transition-all duration-300">
+      <div className="bg-white rounded-lg p-4 md:p-6 shadow-lg border border-neutral-100 hover:shadow-premium transition-all duration-300">
         <h3 className="font-semibold text-base md:text-lg text-neutral-900 mb-3 md:mb-4">{title}</h3>
         <div className="space-y-3 md:space-y-4">{children}</div>
       </div>
@@ -74,12 +74,12 @@ function App() {
     icon?: React.ReactNode
     className?: string
   }) => {
-    const baseClasses = "inline-flex items-center justify-center gap-2 rounded-xl font-medium transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-orange-300"
+    const baseClasses = "inline-flex items-center justify-center gap-2 rounded-md font-medium transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-orange-300"
     
     const variantClasses = {
-      primary: "bg-gradient-to-r from-[#FF8C42] to-[#FF6B1A] text-white shadow-glow-orange hover:shadow-glow-orange-lg hover:scale-105",
+      primary: "bg-gradient-to-r from-[#CC5500] to-[#B8460E] text-white shadow-glow-orange hover:shadow-glow-orange-lg hover:scale-105",
       secondary: "bg-gradient-to-r from-[#1E3A5F] to-[#2A4A6B] text-white shadow-md hover:shadow-lg hover:scale-105",
-      outline: "border-2 border-[#FF8C42] text-[#FF8C42] hover:bg-[#FF8C42] hover:text-white hover:scale-105"
+      outline: "border-2 border-[#CC5500] text-[#CC5500] hover:bg-[#CC5500] hover:text-white hover:scale-105"
     }
     
     const sizeClasses = {
@@ -116,14 +116,14 @@ function App() {
     }
 
     return (
-      <div className="bg-white rounded-2xl p-3 md:p-4 shadow-lg border border-neutral-100 hover:shadow-premium transition-all duration-300 hover:-translate-y-1 min-h-[120px] md:min-h-[140px] flex flex-col">
+      <div className="bg-white rounded-lg p-3 md:p-4 shadow-lg border border-neutral-100 hover:shadow-premium transition-all duration-300 hover:-translate-y-1 min-h-[120px] md:min-h-[140px] flex flex-col hover:border-brand-light-blue">
         <div className="flex items-start justify-between mb-2 md:mb-3">
-          <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-orange-500 to-blue-500 rounded-xl flex items-center justify-center text-white flex-shrink-0">
+          <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#CC5500] to-[#B8460E] rounded-md flex items-center justify-center text-white flex-shrink-0">
             <div className="w-4 h-4 md:w-5 md:h-5 flex items-center justify-center">
               {icon}
             </div>
           </div>
-          <span className={`px-2 py-1 rounded-full text-xs font-semibold ${trendColors[trend]} flex-shrink-0 whitespace-nowrap`}>{change}</span>
+          <span className={`px-2 py-1 rounded-md text-xs font-semibold ${trendColors[trend]} flex-shrink-0 whitespace-nowrap`}>{change}</span>
         </div>
         <div className="flex-1 flex flex-col justify-end">
           <h3 className="text-lg md:text-xl font-serif font-bold text-neutral-900 mb-1 leading-tight">{value}</h3>
@@ -147,11 +147,11 @@ function App() {
   return (
     <div className={`min-h-screen transition-all duration-1000 ${isLoaded ? "animate-fade-in" : "opacity-0"}`}>
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-orange-100/10 to-transparent rounded-full animate-float"></div>
-        <div
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-blue-100/10 to-transparent rounded-full animate-float"
-          style={{ animationDelay: "2s" }}
-        ></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-100/10 to-transparent rounded-full animate-float"></div>
+                <div
+                  className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-[#1E3A5F]/10 to-transparent rounded-full animate-float"
+                  style={{ animationDelay: "2s" }}
+                ></div>
       </div>
 
       <header className="relative bg-white/90 backdrop-blur-xl shadow-sm border-b border-neutral-200/50 sticky top-0 z-50">
@@ -169,12 +169,12 @@ function App() {
             {/* Mobile menu button */}
             <div className="flex items-center gap-3">
               <div className="hidden md:flex items-center gap-2 text-sm text-neutral-600">
-                <Star size={14} className="text-[#FF8C42]" />
+                <Star size={14} className="text-[#CC5500]" />
                 <span>Capit Store</span>
               </div>
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden p-2 rounded-lg text-neutral-600 hover:bg-neutral-100 transition-colors"
+                className="md:hidden p-2 rounded-md text-neutral-600 hover:bg-neutral-100 transition-colors"
               >
                 {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
               </button>
@@ -198,9 +198,9 @@ function App() {
                       setActiveTab(item.id)
                       setIsMobileMenuOpen(false)
                     }}
-                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 ${
+                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-md text-left transition-all duration-200 ${
                       activeTab === item.id
-                        ? "bg-[#FF8C42] text-white shadow-md"
+                        ? "bg-[#CC5500] text-white shadow-md"
                         : "text-neutral-700 hover:bg-orange-50"
                     }`}
                   >
@@ -225,9 +225,9 @@ function App() {
                   <button
                     key={item.id}
                     onClick={() => setActiveTab(item.id)}
-                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 transform hover:scale-102 ${
+                    className={`w-full flex items-center gap-3 px-4 py-3 rounded-md text-left transition-all duration-200 transform hover:scale-102 ${
                       activeTab === item.id
-                        ? "bg-[#FF8C42] text-white shadow-md"
+                        ? "bg-[#CC5500] text-white shadow-md"
                         : "text-neutral-700 hover:bg-orange-50 hover:shadow-sm"
                     }`}
                     style={{ animationDelay: `${index * 50}ms` }}
@@ -252,24 +252,24 @@ function App() {
                 </section>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                  <div className="glass-card p-4 md:p-6 rounded-2xl text-center space-y-3 md:space-y-4 hover:shadow-lg transition-all duration-300">
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#FF8C42] to-[#FF6B1A] rounded-xl flex items-center justify-center mx-auto">
+                  <div className="glass-card p-4 md:p-6 rounded-lg text-center space-y-3 md:space-y-4 hover:shadow-lg transition-all duration-300">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#1E3A5F] to-[#2A4A6B] rounded-lg flex items-center justify-center mx-auto">
                       <Palette className="text-white" size={20} />
                     </div>
                     <h3 className="font-semibold text-base md:text-lg">Cores Consistentes</h3>
                     <p className="text-xs md:text-sm text-neutral-600">Paleta de cores cuidadosamente selecionada</p>
                   </div>
 
-                  <div className="glass-card p-4 md:p-6 rounded-2xl text-center space-y-3 md:space-y-4 hover:shadow-lg transition-all duration-300">
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto">
+                  <div className="glass-card p-4 md:p-6 rounded-lg text-center space-y-3 md:space-y-4 hover:shadow-lg transition-all duration-300">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#1E3A5F] to-[#49679f] rounded-lg flex items-center justify-center mx-auto">
                       <Type className="text-white" size={20} />
                     </div>
                     <h3 className="font-semibold text-base md:text-lg">Tipografia</h3>
                     <p className="text-xs md:text-sm text-neutral-600">Sistema tipográfico hierárquico e legível</p>
                   </div>
 
-                  <div className="glass-card p-4 md:p-6 rounded-2xl text-center space-y-3 md:space-y-4 hover:shadow-lg transition-all duration-300 md:col-span-1 lg:col-span-1">
-                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mx-auto">
+                  <div className="glass-card p-4 md:p-6 rounded-lg text-center space-y-3 md:space-y-4 hover:shadow-lg transition-all duration-300 md:col-span-1 lg:col-span-1">
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-[#2A4A6B] to-[#1E3A5F] rounded-lg flex items-center justify-center mx-auto">
                       <Layers className="text-white" size={20} />
                     </div>
                     <h3 className="font-semibold text-base md:text-lg">Componentes</h3>
@@ -343,7 +343,7 @@ function App() {
                         <p className="text-xs text-neutral-600">Logo Preto</p>
                       </div>
                       <div className="text-center space-y-3">
-                        <div className="bg-gradient-to-br from-orange-400 to-orange-600 p-4 rounded-xl">
+                        <div className="bg-gradient-to-br from-[#1E3A5F] to-[#2A4A6B] p-4 rounded-xl">
                           <img src="/capit-store-logo-simple.png" alt="Logo Branco" className="h-12 mx-auto brightness-0 invert" />
                         </div>
                         <p className="text-xs text-neutral-600">Logo Branco</p>
@@ -356,17 +356,10 @@ function App() {
                     <h3 className="text-base md:text-lg font-semibold text-neutral-900 mb-4 md:mb-6">Cores da Marca</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                       <div className="text-center space-y-3">
-                        <div className="w-16 h-16 bg-[#FF8C42] rounded-2xl mx-auto shadow-lg"></div>
+                        <div className="w-16 h-16 bg-[#00D4C4] rounded-2xl mx-auto shadow-lg"></div>
                         <div>
-                          <p className="font-medium text-sm">Orange Primary</p>
-                          <p className="text-xs text-neutral-500">#FF8C42</p>
-                        </div>
-                      </div>
-                      <div className="text-center space-y-3">
-                        <div className="w-16 h-16 bg-[#FF6B1A] rounded-2xl mx-auto shadow-lg"></div>
-                        <div>
-                          <p className="font-medium text-sm">Orange Dark</p>
-                          <p className="text-xs text-neutral-500">#FF6B1A</p>
+                          <p className="font-medium text-sm">Teal Primary</p>
+                          <p className="text-xs text-neutral-500">#00D4C4</p>
                         </div>
                       </div>
                       <div className="text-center space-y-3">
@@ -377,10 +370,18 @@ function App() {
                         </div>
                       </div>
                       <div className="text-center space-y-3">
-                        <div className="w-16 h-16 bg-[#00D4C4] rounded-2xl mx-auto shadow-lg"></div>
+                        <div className="w-16 h-16 bg-[#2A4A6B] rounded-2xl mx-auto shadow-lg"></div>
                         <div>
-                          <p className="font-medium text-sm">Teal</p>
-                          <p className="text-xs text-neutral-500">#00D4C4</p>
+                          <p className="font-medium text-sm">Steel Blue</p>
+                          <p className="text-xs text-neutral-500">#2A4A6B</p>
+                        </div>
+                      </div>
+                      <div className="text-center space-y-3">
+                        <div className="w-16 h-16 bg-[#49679f] rounded-2xl mx-auto shadow-lg"></div>
+                        <div>
+                          <p className="font-medium text-sm">Slate Blue</p>
+                          <p className="text-xs text-neutral-500">#49679f</p>
+                          <span className="inline-block px-2 py-1 bg-[#CC5500] text-white text-xs rounded-full mt-1">Accent</span>
                         </div>
                       </div>
                     </div>
@@ -390,13 +391,13 @@ function App() {
                   <div className="glass-card p-6 md:p-8 rounded-2xl">
                     <h3 className="text-base md:text-lg font-semibold text-neutral-900 mb-4 md:mb-6">Tipografia da Marca</h3>
                     <div className="space-y-4 md:space-y-6">
-                      <div className="border-l-4 border-orange-400 pl-4">
+                      <div className="border-l-4 border-[#1E3A5F] pl-4">
                         <h4 className="text-2xl md:text-3xl font-bold text-neutral-900">Capit Store</h4>
-                        <p className="text-sm text-neutral-600">Fonte principal - Inter Bold</p>
+                        <p className="text-sm text-neutral-600">Fonte principal - Outfit Bold</p>
                       </div>
-                      <div className="border-l-4 border-blue-400 pl-4">
+                      <div className="border-l-4 border-[#2A4A6B] pl-4">
                         <h4 className="text-lg md:text-xl font-semibold text-neutral-700">Subtítulos e Navegação</h4>
-                        <p className="text-sm text-neutral-600">Fonte secundária - Inter Semibold</p>
+                        <p className="text-sm text-neutral-600">Fonte secundária - Outfit Semibold</p>
                       </div>
                       <div className="border-l-4 border-neutral-300 pl-4">
                         <p className="text-base text-neutral-600">Texto corrido e descrições utilizando Inter Regular para máxima legibilidade e consistência visual.</p>
@@ -452,10 +453,10 @@ function App() {
                   <div>
                     <h3 className="text-base md:text-lg font-semibold text-neutral-900 mb-3 md:mb-4">Cores Primárias</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-                      <ColorSwatch color="#FF8C42" name="Orange Primary" />
-                      <ColorSwatch color="#FF6B1A" name="Orange Dark" />
+                      <ColorSwatch color="#00D4C4" name="Teal Primary" />
                       <ColorSwatch color="#1E3A5F" name="Navy Blue" />
-                      <ColorSwatch color="#00D4C4" name="Teal" />
+                      <ColorSwatch color="#2A4A6B" name="Steel Blue" />
+                      <ColorSwatch color="#49679f" name="Slate Blue" />
                     </div>
                   </div>
 
@@ -474,10 +475,10 @@ function App() {
                   <div>
                     <h3 className="text-base md:text-lg font-semibold text-neutral-900 mb-3 md:mb-4">Cores Semânticas</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-                      <ColorSwatch color="#28A745" name="Success" />
-                      <ColorSwatch color="#DC3545" name="Error" />
-                      <ColorSwatch color="#FFC107" name="Warning" />
-                      <ColorSwatch color="#17A2B8" name="Info" />
+                      <ColorSwatch color="#10B981" name="Success" />
+                      <ColorSwatch color="#EF4444" name="Error" />
+                      <ColorSwatch color="#F59E0B" name="Warning" />
+                      <ColorSwatch color="#3B82F6" name="Info" />
                     </div>
                   </div>
                 </div>
@@ -830,7 +831,7 @@ function App() {
                     <h3 className="text-lg md:text-xl font-semibold text-neutral-900">Cards de Produtos</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                       {/* Energético Premium */}
-                      <div className="bg-white rounded-2xl p-4 md:p-6 shadow-lg border border-neutral-100 hover:shadow-premium transition-all duration-300 group">
+                      <div className="bg-white rounded-2xl p-4 md:p-6 shadow-lg border border-neutral-100 hover:shadow-premium transition-all duration-300 group hover:border-[#00D4C4]/50 h-[450px] flex flex-col">
                         <div className="relative mb-4">
                           <img 
                             src="/bebida-energetico.jpg" 
@@ -843,13 +844,13 @@ function App() {
                             </button>
                           </div>
                           <div className="absolute top-2 left-2">
-                            <span className="bg-[#FF8C42] text-white text-xs font-medium px-2 py-1 rounded-full">Novo</span>
+                            <span className="bg-[#CC5500] text-white text-xs font-medium px-2 py-1 rounded-full border-2 border-white">31% OFF</span>
                           </div>
                         </div>
-                        <div className="space-y-3">
-                          <div>
+                        <div className="space-y-3 flex-1 flex flex-col">
+                          <div className="flex-1">
                             <h4 className="font-semibold text-neutral-900">Energético Premium</h4>
-                            <p className="text-sm text-neutral-600">Bebida energética natural com guaraná</p>
+                            <p className="text-sm text-neutral-600 line-clamp-2">Bebida energética natural com guaraná orgânico, vitaminas e minerais essenciais para energia duradoura</p>
                           </div>
                           <div className="flex items-center gap-2">
                             <div className="flex items-center gap-1">
@@ -864,33 +865,35 @@ function App() {
                               <span className="text-lg font-bold text-neutral-900">R$ 8,90</span>
                               <span className="text-sm text-neutral-500 line-through">R$ 12,90</span>
                             </div>
-                            <span className="text-xs text-green-600 font-medium">31% OFF</span>
                           </div>
-                          <button className="w-full bg-gradient-to-r from-[#FF8C42] to-[#FF6B1A] text-white py-2.5 rounded-xl font-medium hover:shadow-glow-orange-lg hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2">
+                          <button className="w-full bg-gradient-to-r from-[#00D4C4] to-[#1E3A5F] text-white py-2.5 rounded-md font-medium hover:shadow-glow-blue hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2 border border-[#CC5500]/30 hover:border-[#CC5500]/60">
                             <ShoppingBag size={16} />
                             Adicionar ao Carrinho
                           </button>
                         </div>
                       </div>
 
-                      {/* Suco Natural */}
-                      <div className="bg-white rounded-2xl p-4 md:p-6 shadow-lg border border-neutral-100 hover:shadow-premium transition-all duration-300 group">
+                      {/* Vodka Premium */}
+                      <div className="bg-white rounded-lg p-4 md:p-6 shadow-lg border border-neutral-100 hover:shadow-premium transition-all duration-300 group hover:border-[#00D4C4]/50 h-[450px] flex flex-col">
                         <div className="relative mb-4">
                           <img 
-                            src="/bebida-suco.jpg" 
-                            alt="Suco Natural" 
-                            className="w-full h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
+                            src="/bebida-vodka.svg" 
+                            alt="Vodka Premium" 
+                            className="w-full h-48 object-cover rounded-md group-hover:scale-105 transition-transform duration-300"
                           />
                           <div className="absolute top-2 right-2">
                             <button className="w-8 h-8 bg-white/90 rounded-full flex items-center justify-center shadow-md hover:bg-white transition-colors">
                               <Heart size={16} className="text-red-500 fill-current" />
                             </button>
                           </div>
+                          <div className="absolute top-2 left-2">
+                            <span className="bg-[#CC5500] text-white text-xs font-medium px-2 py-1 rounded-full border-2 border-white">Premium</span>
+                          </div>
                         </div>
-                        <div className="space-y-3">
-                          <div>
-                            <h4 className="font-semibold text-neutral-900">Suco Natural</h4>
-                            <p className="text-sm text-neutral-600">Suco de laranja 100% natural</p>
+                        <div className="space-y-3 flex-1 flex flex-col">
+                          <div className="flex-1">
+                            <h4 className="font-semibold text-neutral-900">Vodka Premium</h4>
+                            <p className="text-sm text-neutral-600 line-clamp-2">Vodka importada premium 750ml, destilada cinco vezes para pureza máxima e sabor suave</p>
                           </div>
                           <div className="flex items-center gap-2">
                             <div className="flex items-center gap-1">
@@ -902,10 +905,10 @@ function App() {
                           </div>
                           <div className="flex items-center justify-between">
                             <div className="flex items-center gap-2">
-                              <span className="text-lg font-bold text-neutral-900">R$ 6,50</span>
+                              <span className="text-lg font-bold text-neutral-900">R$ 45,90</span>
                             </div>
                           </div>
-                          <button className="w-full bg-gradient-to-r from-[#FF8C42] to-[#FF6B1A] text-white py-2.5 rounded-xl font-medium hover:shadow-glow-orange-lg hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2">
+                          <button className="w-full bg-gradient-to-r from-[#00D4C4] to-[#1E3A5F] text-white py-2.5 rounded-md font-medium hover:shadow-glow-blue hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2 border border-[#CC5500]/30 hover:border-[#CC5500]/60">
                             <ShoppingBag size={16} />
                             Adicionar ao Carrinho
                           </button>
@@ -913,7 +916,7 @@ function App() {
                       </div>
 
                       {/* Água Premium */}
-                      <div className="bg-white rounded-2xl p-4 md:p-6 shadow-lg border border-neutral-100 hover:shadow-premium transition-all duration-300 group">
+                      <div className="bg-white rounded-2xl p-4 md:p-6 shadow-lg border border-neutral-100 hover:shadow-premium transition-all duration-300 group hover:border-[#00D4C4]/50 h-[450px] flex flex-col">
                         <div className="relative mb-4">
                           <img 
                             src="/bebida-agua.jpg" 
@@ -925,11 +928,14 @@ function App() {
                               <Heart size={16} className="text-neutral-400 hover:text-red-500" />
                             </button>
                           </div>
+                          <div className="absolute top-2 left-2">
+                            <span className="bg-[#CC5500] text-white text-xs font-medium px-2 py-1 rounded-full border-2 border-white">Natural</span>
+                          </div>
                         </div>
-                        <div className="space-y-3">
-                          <div>
+                        <div className="space-y-3 flex-1 flex flex-col">
+                          <div className="flex-1">
                             <h4 className="font-semibold text-neutral-900">Água Premium</h4>
-                            <p className="text-sm text-neutral-600">Água mineral natural premium</p>
+                            <p className="text-sm text-neutral-600 line-clamp-2">Água mineral natural premium, extraída de fontes cristalinas com minerais essenciais para hidratação</p>
                           </div>
                           <div className="flex items-center gap-2">
                             <div className="flex items-center gap-1">
@@ -944,7 +950,7 @@ function App() {
                               <span className="text-lg font-bold text-neutral-900">R$ 3,90</span>
                             </div>
                           </div>
-                          <button className="w-full bg-gradient-to-r from-[#FF8C42] to-[#FF6B1A] text-white py-2.5 rounded-xl font-medium hover:shadow-glow-orange-lg hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2">
+                          <button className="w-full bg-gradient-to-r from-[#00D4C4] to-[#1E3A5F] text-white py-2.5 rounded-md font-medium hover:shadow-glow-blue hover:scale-105 transition-all duration-200 flex items-center justify-center gap-2 border border-[#CC5500]/30 hover:border-[#CC5500]/60">
                             <ShoppingBag size={16} />
                             Adicionar ao Carrinho
                           </button>
@@ -973,22 +979,22 @@ function App() {
                             <span className="font-semibold text-sm">R$ 17,80</span>
                           </div>
                           
-                          <div className="flex items-center gap-3 p-3 bg-neutral-50 rounded-xl">
-                            <img src="/bebida-suco.jpg" alt="Suco" className="w-12 h-12 object-cover rounded-lg" />
+                          <div className="flex items-center gap-3 p-3 bg-neutral-50 rounded-md hover:bg-brand-light-orange/10 transition-colors">
+                            <img src="/bebida-vodka.svg" alt="Vodka" className="w-12 h-12 object-cover rounded-md" />
                             <div className="flex-1">
-                              <p className="font-medium text-sm">Suco Natural</p>
+                              <p className="font-medium text-sm">Vodka Premium</p>
                               <p className="text-xs text-neutral-500">Quantidade: 1</p>
                             </div>
-                            <span className="font-semibold text-sm">R$ 6,50</span>
+                            <span className="font-semibold text-sm">R$ 45,90</span>
                           </div>
                         </div>
                         
                         <div className="border-t pt-3">
                           <div className="flex items-center justify-between mb-3">
                             <span className="font-semibold">Total:</span>
-                            <span className="font-bold text-lg text-[#FF8C42]">R$ 24,30</span>
+                            <span className="font-bold text-lg text-[#00D4C4]">R$ 63,70</span>
                           </div>
-                          <button className="w-full bg-gradient-to-r from-[#1E3A5F] to-[#2A4A6B] text-white py-3 rounded-xl font-medium hover:shadow-lg hover:scale-105 transition-all duration-200">
+                          <button className="w-full bg-gradient-to-r from-[#00D4C4] to-[#1E3A5F] text-white py-3 rounded-md font-medium hover:shadow-lg hover:scale-105 transition-all duration-200 border border-[#CC5500]/30 hover:border-[#CC5500]/60">
                             Finalizar Compra
                           </button>
                         </div>

@@ -1,10 +1,12 @@
 export const colors = {
   // Brand Colors
   brand: {
-    primary: '#FF8C42',      // Laranja principal
-    secondary: '#1E3A5F',    // Azul petróleo
-    accent: '#00D4C4',       // Turquesa
-    tertiary: '#49679f',     // Azul especificado
+    primary: '#1E3A5F',      // Azul petróleo principal
+    secondary: '#2A4A6B',    // Azul aço
+    accent: '#49679f',       // Azul ardósia
+    tertiary: '#CC5500',     // Laranja como cor de destaque
+    lightBlue: '#87CEEB',    // Azul claro para destaques pontuais
+    lightOrange: '#FFB366',  // Laranja claro para destaques pontuais
   },
   
   // Semantic Colors
@@ -12,7 +14,7 @@ export const colors = {
     success: '#10B981',
     warning: '#F59E0B',
     error: '#EF4444',
-    info: '#3B82F6',
+    info: '#1E3A5F',        // Usando azul principal para info
   },
   
   // Neutral Colors
@@ -34,7 +36,7 @@ export const colors = {
     primary: '#FFFFFF',
     secondary: '#F9FAFB',
     tertiary: '#F3F4F6',
-    dark: '#1F2937',
+    dark: '#1E3A5F',        // Usando azul escuro para fundo dark
   },
   
   // Text Colors
@@ -43,7 +45,7 @@ export const colors = {
     secondary: '#4B5563',
     tertiary: '#6B7280',
     inverse: '#FFFFFF',
-    brand: '#1E3A5F',
+    brand: '#1E3A5F',       // Mantendo azul para texto da marca
   }
 } as const;
 

@@ -15,7 +15,7 @@ const Card: React.FC<CardProps> = ({
   className = '',
   hover = false,
 }) => {
-  const baseClasses = 'bg-white rounded-xl transition-all duration-200';
+  const baseClasses = 'bg-white rounded-lg transition-all duration-200';
   
   const variantClasses = {
     default: 'shadow-base',
